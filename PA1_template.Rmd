@@ -144,7 +144,7 @@ qplot(x=weekday.interval$interval, y=weekday.interval$steps, data=weekday.interv
 ```
 
 
-Final Observations:
+Final Observations: 
 
 There differences btween the activity patterns between weekdays and weekends. The plot indicates that the person moves around more (or more active) during the weekend days.
 
