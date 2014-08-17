@@ -202,11 +202,14 @@ weekday.interval<- aggregate(steps ~ interval, data = activity, subset = activit
 - Second, make the plots
 
 ```r
-qplot(x=weekend.interval$interval, y=weekend.interval$steps, data=weekend.interval, geom='line')+ geom_line(colour="blue", stat="identity")+ labs(title='Average Number of Steps Taken Averaged Across Weekend Days\n',y='Averaged across weekend days', x='Total intervals in 24 Hours')
+par(mfrow=c(2,1))
+
+plot(weekend.interval$interval,weekend.interval$steps,type="l", col='blue',ylab='Averaged across weekend days', xlab="Total intervals in 24 Hours", main="Average Number of Steps Taken Averaged Across Weekend Days\n")
+
+plot(weekday.interval$interval,weekday.interval$steps,type="l", col='red',ylab='Averaged across weekday days', xlab="Total intervals in 24 Hours", main="Average Number of Steps Taken Averaged Across Weekday Days\n")
 ```
 
 ![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
-![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
 
 
 Final Observations: 
